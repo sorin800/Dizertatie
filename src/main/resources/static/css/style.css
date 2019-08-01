@@ -1,0 +1,229 @@
+*{
+	margin: 0;
+  	padding: 0;
+  	box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.bgRegister {
+    /* The image used */
+    background-image: url("http://www.perrymotors.com/public/images/top-background.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgLogin {
+	    /* The image used */
+    background-image: url("http://www.perrymotors.com/public/images/top-background.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1,h2,p,span{
+    font-family: "Raleway", sans-serif;
+}
+.carousel-item img{
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+.carousel-item{
+    opacity: 0.9;
+    filter: alpha(opacity=40); /* msie */
+    background-color: #000;
+}
+.bg-color-dark {
+  background-color: rgb(0, 0, 0);
+}
+
+/* nav .navbar-nav li a {
+    color: #ffffff !important;
+}
+   */
+nav .navbar-nav li .nav-link {
+    color: #ffffff !important;
+}  
+
+nav .navbar-nav li .nav-link:hover {
+    color:  #D3D3D3 !important;
+}  
+
+/* nav .navbar-nav li a:hover {
+  color: #D3D3D3 !important;
+} */
+.search{
+   background-color: #323232 !important
+}
+.card-body{
+  background-color: #FFFFFF
+}
+.navbar-nav > li{
+    padding-left:25px;
+    padding-right:25px;
+  }
+.card-img-top{
+	width:298px !important;
+	height:223px !important;
+}
+.card-text1 {
+  color: white;
+}
+.card-text2 {
+  color: white;
+}
+
+.carousel-item img {
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+.bg-dark-light {
+  background: #323232 !important;
+}
+.bg-theme,
+.bg-dark,
+.bg-dark-light,
+.bg-secondary {
+  color: #ffffff;
+}
+.widgets.footer-widgets .widget-title {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.widgets.footer-widgets .widget-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100px;
+  background: #13bfb1;
+}
+.widgets.footer-widgets .widget-quick-links ul {
+  margin-top: -4px;
+}
+.widgets.footer-widgets .single-widget ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.card{
+   padding: 10px; 
+}
+
+.card:hover{
+  -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.85);
+  -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.85);
+  box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.85);
+}
+
+.widgets.footer-widgets .widget-quick-links ul li {
+  display: block;
+}
+.widgets.footer-widgets .widget-quick-links ul li a {
+  display: block;
+  font-size: 13px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 9px 0;
+}
+
+.widgets.footer-widgets .single-widget ul li {
+  list-style: none;
+  font-family: "Raleway", sans-serif;
+}
+.widgets.footer-widgets .widget-contact ul li {
+  color: #000;
+  font-size: 13px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.widgets.footer-widgets .widget-contact ul li span {
+  font-size: 14px;
+  color: #ffffff;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  line-height: 28px;
+  text-align: center;
+  margin-right: 20px;
+}
+.widgets.footer-widgets .widget-contact ul li.phone,
+.widgets.footer-widgets .widget-contact ul li.fax {
+  font-size: 15px;
+}
+
+.widgets.footer-widgets .widget-contact ul li + li {
+  margin-top: 20px;
+}
+
+/* Login CSS */
+
+hr {
+	border: none;
+	height: 1px;
+	color: #333;
+	background-color: #333;
+}
+
+
+.section-headline {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 24px;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	margin-top: 100px;
+}
+
+.section-headline2 {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 24px;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+.section-headline2 span {
+	background-color: #231F20;
+	padding: 10px 300px;
+}
+
+.section-headline span {
+	background-color: #231F20;
+	padding: 10px 300px;
+}
+.card-body{
+    padding:0.5rem;
+}

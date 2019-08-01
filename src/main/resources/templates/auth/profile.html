@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"
+          href="css/style.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet"
+          th:href="@{/libs/bootstrap/css/bootstrap.min.css}"/>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" th:href="@{/css/springit.css}">
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Oswald|Roboto">
+    <!-- Font Awesome (for icons) -->
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!-- FONT API -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <title>SearchAuto</title>
+</head>
+<body onload="paginareProfile()">
+<div class="bgLogin">
+    <nav th:replace="~{static/navbar :: nav}"></nav>
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <img class="img-fluid"
+             src="/img/header.jpg"/>
+
+        <!-- Ads + Last Searches-->
+
+
+        <hr style="postion: absolute; width: 100%; height: 6px; background-color: #333; z-index: -1; margin-top: 20px;"/>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-headline2">
+                    <span> Saved Ads </span>
+                </h2>
+            </div>
+            <br>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row" th:if="${not #lists.isEmpty(lista)}">
+                        <div class="col-sm-3 element" th:each="elem: ${lista}">
+                            <div class="card" style='width:20rem;'>
+                                <a target='_blank' th:href=" ${elem.link}" >
+                                    <img class='card-img-top' th:src="${elem.img}" alt='Card image cap'> </a>
+                                <div class='card-body text-center'>
+                                    <p class='card-text text-center' style='color: black' th:text="${elem.title}"> Dacia Logan</p>
+                                    <ul class='list-group list-group-flush'>
+                                        <li class='list-group-item'>
+                                            <div class='row'>
+                                                <div class='col-md-6'>
+                                                    <i class='material-icons'>&#xe227;</i><span th:text="${elem.price}"> 3200 </span>
+                                                </div>
+                                                <div class='col-md-6'>
+                                                    <i class='material-icons'>&#xe0c8;</i><span th:text="${elem.city}">Bucuresti</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="paginareProfile" th:if="${not #lists.isEmpty(lista)}" >
+                <nav style='margin-top:5px;'>
+                <ul class='pagination paginationProfile justify-content-center pagination-sm profileAdsPagination'>
+                    </ul>
+                </nav>
+            </div>
+
+            <hr style="postion: absolute; width: 100%; height: 6px; background-color: #333; z-index: -1; margin-top: 20px;"/>
+
+            <div class="col-12">
+                <div class="collapse-accordion" id="accordion" role="tablist"
+                     aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header mx-auto" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" href="#collapseOne"
+                                   aria-expanded="false" aria-controls="collapseOne"> Search History
+                                    <!-- <small>(3 results)</small> -->
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="card-block">
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead class="thead-default">
+                                        <tr>
+                                            <th>Marca</th>
+                                            <th>Model</th>
+                                            <th>Pret De La</th>
+                                            <th>Pret Pana La</th>
+                                            <th>An Fabricatie De La</th>
+                                            <th>An Fabricatie Pana La</th>
+                                            <th>Oras</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr th:each="elem: ${listaHistory}">
+                                            <td th:text="${elem.marca}"></td>
+                                            <td th:text="${elem.model}"></td>
+                                            <td th:text="${elem.pretDeLa}"></td>
+                                            <td th:text="${elem.pretPanaLa}"></td>
+                                            <td th:text="${elem.anFabrDeLa}"></td>
+                                            <td th:text="${elem.anFabrPanaLa}"></td>
+                                            <td th:text="${elem.oras}"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <p>TSV &copy; 2019, All Rights Reserved</p>
+    </footer>
+    <!-- Footer -->
+</div>
+
+
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+<script src="js/paginationProfile.js"></script>
+    </body>
+</html>
+		
